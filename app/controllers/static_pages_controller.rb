@@ -1,19 +1,20 @@
 class StaticPagesController < ApplicationController
     def hello
-        render html: "Hello, world!" 
+        render "hello" 
     end
     def home
-        render html: "This is the home page"
+        render "home"
     end
     def goodbye
-        render html: "Goodbye!"
+        render "goodbye"
     end
     def name
-        render html: "My name is Jack"
+        render "name"
     end
     def roll_die
-        number = (1..6).to_a.sample
-        render html: "Your number is #{number}"
+        @number = (1..6).to_a.sample
+        render "roll_die"
     end
 end
+#anytime passing a varible through a view use instance vairables @variable.
         
